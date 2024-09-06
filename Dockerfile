@@ -22,16 +22,13 @@ RUN apt-get update && apt-get install -y \
     libgbm1 \
     chromium-browser \
     chromium-chromedriver \
-    # dbus-x11 \
     libglib2.0-0 \
-    # fonts-liberation \
     libappindicator3-1 \
     libatk-bridge2.0-0 \
     libasound2 \
     libdbus-1-3 \
     libgdk-pixbuf2.0-0 \
     libnspr4
-    # xdg-utils
 
 # install selenium
 RUN python3 -m venv /app/venv && \
