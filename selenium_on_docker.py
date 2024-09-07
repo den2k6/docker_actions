@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 TARGET_URL = "https://den2k6.github.io/actions_aws_deploy/"
-EXPECTED_H1 = "Deploy to AWS S3 by GitHub Action"
+EXPECTED_H1 = "Deploy to AWS S3 by GitHub Actions"
 
 def test_selenium(url, expected_h1):
     """run selenium"""
