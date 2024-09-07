@@ -26,9 +26,9 @@ def test_selenium(url, expected_h1):
     h1_text = driver.find_element(By.TAG_NAME, "h1").text
     assert (
         h1_text == expected_h1
-    ), f"Title does not match. Expected: {expected_h1}, Actual: {h1_text}"
-    print(f"title:   {driver.title}")
-    print(f"h1 text: {h1_text}")
+    ), f"h1 text does not match. Expected: {expected_h1}, Actual: {h1_text}"
+    print(f"  title:   {driver.title}")
+    print(f"  h1 text: {h1_text}")
 
     driver.quit()
 
