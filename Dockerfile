@@ -35,9 +35,9 @@ RUN python3 -m venv /app/venv && \
     /app/venv/bin/pip install --upgrade pip && \
     /app/venv/bin/pip install selenium
 
-COPY hello.py /app/hello.py
+COPY selenium_on_docker.py /app/selenium_on_docker.py
 
 # Chrome headless mode
 ENV DISPLAY=:99
 
-CMD ["sh", "-c", "Xvfb :99 -screen 0 1920x1080x24 & /app/venv/bin/python /app/hello.py"]
+CMD ["sh", "-c", "Xvfb :99 -screen 0 1920x1080x24 & /app/venv/bin/python /app/selenium_on_docker.py"]
