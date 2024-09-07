@@ -5,9 +5,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 TARGET_URL = "https://den2k6.github.io/actions_aws_deploy/"
+EXPECTED_H1 = "Deploy to AWS S3 by GitHub Action"
 
-
-def test_selenium(url):
+def test_selenium(url, expected_h1):
     """run selenium"""
 
     # set up
@@ -23,13 +23,15 @@ def test_selenium(url):
 
     # exec selenium
     driver.get(url)
-
-    print(f"title:   {driver.title}")
     h1_text = driver.find_element(By.TAG_NAME, "h1").text
+    assert (
+        h1_text == expected_h1
+    ), f"Title does not match. Expected: {expected_h1}, Actual: {h1_text}"
+    print(f"title:   {driver.title}")
     print(f"h1 text: {h1_text}")
 
     driver.quit()
 
 
 if __name__ == "__main__":
-    test_selenium(TARGET_URL)
+    test_selenium(TARGET_URL, EXPECTED_H1)
