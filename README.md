@@ -12,9 +12,9 @@
 
 #### chromedriver の更新手順(MacOS)
 
-1. brew update
-1. brew upgrade chromedriver
-1. chromedriver --version
+1. `brew update` Homebrew を更新
+1. `brew upgrade chromedriver` chromedriver を更新
+1. `chromedriver --version` chromedriver のバージョンを確認
 
 
 #### ローカルの docker container で実行
