@@ -10,6 +10,13 @@
 
 1. `python selenium_on_docker.py` コマンドを実行します。
 
+#### chromedriver の更新手順(MacOS)
+
+1. brew update
+1. brew upgrade chromedriver
+1. chromedriver --version
+
+
 #### ローカルの docker container で実行
 
 1. `docker build -t docker-actions .` コマンドを実行して、Docker イメージをビルドします。
